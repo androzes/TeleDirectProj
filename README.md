@@ -1,3 +1,3 @@
 # TeleDirectProj
 
-Refer to Setup Instructions/ for installation.
+Refer to /Setup Instructions/ for installation.
