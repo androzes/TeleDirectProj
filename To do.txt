@@ -1,0 +1,59 @@
+- Server-side log
+- User-side log
+
+- login
+	- redirect to home page ####done!!
+	- on relogin after incorrect attempt hide error message #
+	- encrypt password both in database & client-side
+	- record login time
+	- session check every time ####done!!
+	- redirect to login page if no session found ####done!!
+
+- add contact
+	- check priveleges
+	- set default vaues 
+	- phone number format 
+	- dynamic check for duplicate records 
+	- dob should open 20 years back from now 
+	- auto close dialog after successful add ####done!!
+	- Redesign dialog box ####done!!
+	
+	
+- save contact details (add contact script)
+	- when server is down show appropriate message ##
+	- show the spinner and disable submit & save button ##
+	- check for duplication
+	- server-side validation
+
+- list contacts
+	- create grid layout for list view ()HTML) ####done!!
+	- Write a fetch users script ####done!!
+	- convert to JSON ####done!!
+	- Get list of users in JSON format ####done!!
+	- populate grid with the list ####done!!
+	
+- update contact
+	- click on contact to view contact details ####done!!
+	- fetch information from database and display ####done!!
+	- allow user to edit ####done!!
+	
+- delete contact ####done!!
+
+Sikandar
+- show higlighted and mandatory fields with different colour ####done!!
+- Modeled dialog ######done!!
+- OOP javascript code ####done!!
+- OOP php code $$$$$$$$
+
+		Privileges Check Algo
+		
+		//if user has no priveleges
+			//disable add_button
+			//disable contact details button
+			// disable delete button
+		// if user has read-only priveleges
+			//disable add button
+			//disabble form editing
+			// disable delete button
+		// if user has read-write priveleges
+			//allow all

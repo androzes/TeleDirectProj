@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+phpunit_config_file=
+preload_script=/teleDirect/MakeGoodPreload.php
+test_file_pattern=Test.*.php
+test_folders=/teleDirect/Test
+testing_framework=PHPUnit

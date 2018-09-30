@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>TeleDirect</title>
+
+		<!-- jQuery css files -->
+		<link rel="stylesheet" href="css/jquery-ui.theme.min.css">
+		<link rel="stylesheet" href="css/jquery-ui.min.css">
+		<link rel="stylesheet" href="css/jquery-ui.structure.min.css">
+
+		<!-- jQuery script files -->
+		<script type="text/javascript" src="scripts/js/libs/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="scripts/js/libs/jquery-ui-2.1.4.min.js"></script>
+
+		<!-- jStorage for creating sessions -->
+		<script type="text/javascript" src="scripts/js/libs/jstorage.js"></script>
+
+		<!-- jQuery validation plugin -->
+		<script src="scripts/reformed/js/jquery.validate.js" type="text/javascript"></script>
+	  
+		<!-- <script src = "scripts/js/libphonenumber-7.0.9.js"></script>
+		<!-- <script src = "scripts/js/phone-format.js"></script> -->
+
+	  
+		<!-- necessary reformed CSS -->
+		<link rel="stylesheet" href="scripts/reformed/css/uniform.aristo.css" type="text/css" />
+		<link rel="stylesheet" href="scripts/reformed/css/ui.reformed.css" type="text/css" />
+		<link rel="stylesheet" href="scripts/reformed-form-ui-lightness/jquery-ui-1.8.7.custom.css" type="text/css" />
+		<!-- end necessary reformed CSS -->
+
+		
+		<!-- necessary reformed js -->
+		<script src="scripts/reformed/js/jquery.uniform.js" type="text/javascript"></script>
+		<script src="scripts/reformed/js/jquery.ui.reformed.js" type="text/javascript"></script>
+		<!-- end necessary reformed js -->
+		
+		
+		<!-- user css -->
+		<link rel="stylesheet" href="css/home.css" type="text/css" />
+		 
+		<!-- user scripts -->
+		<script type="text/javascript" src="scripts/js/Date.js"></script>
+		<script type="text/javascript" src="scripts/js/Request.js"></script>
+		<script type="text/javascript" src="scripts/js/SerializeObject.js"></script>
+		<script type="text/javascript" src="scripts/js/Operation.js"></script>
+		<script type="text/javascript" src="scripts/js/Person.js"></script>
+		<script type="text/javascript" src="scripts/js/RequestEventHandler.js"></script>
+		<script type="text/javascript" src="scripts/js/Collection.js"></script>
+		<script type="text/javascript" src="scripts/js/PersonCollection.js"></script>
+		<script type="text/javascript" src="scripts/js/FormValidator.js"></script>
+		
+		<script type="text/javascript" src="scripts/js/PersonDetailsForm.js"></script>
+		<script type="text/javascript" src="scripts/js/PersonDetailsDialog.js"></script>
+		
+		<script type="text/javascript" src="scripts/js/User.js"></script>
+		<script type="text/javascript" src="scripts/js/Session.js"></script>
+		<script type="text/javascript" src="scripts/js/LoginHandler.js"></script>
+		<script type="text/javascript" src="scripts/js/UICoordinator.js"></script>
+		<script type="text/javascript" src="scripts/js/Security.js"></script>
+		<script type="text/javascript" src="scripts/js/Main.js"></script>
+		
+	</head>
+
+	   
+	<body style="background-color: #E7EBEC">
+		<div id="nav">
+			<div id="nav-wrapper">
+				<ul id="nav-menu">
+					<li>
+						<a id="add_button">
+							<input type="image"  src="images/add.png"/>
+							<span>ADD</span>
+						</a>
+					</li>
+					<li>
+						<a id="save_button">
+							<input type="image" id="save_button" src="images/save-icon.png"/>
+							<span>SAVE</span>
+						</a>
+					</li>
+				</ul>
+				<ul id="nav-profile">
+					<li>
+						<a href=#>Home</a>
+					</li>
+					<li>
+						<a id="username" >User</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="content">
+			<div id="container">
+				<div id="message"> </div>
+			</div>
+			<div id="dialog" title="New Contact">
+				<p>
+					<div class="reformed-form">
+						<form method="post" name="form_person_details" id="form_person_details">
+							<input type="text" id="id" name="id" style="visibility:hidden"></input>
+							<input type="text" id="avatar" name="avatar" style="visibility:hidden"></input>
+							<table id="table-grid">
+								<tr>
+									<td class="first-col">
+										<select size="1" name="title" id="title" class="required" value="">
+											<option selected disabled value="" style="display:none">Title</option>
+											<option value="Mr">Mr</option>
+											<option value="Ms">Ms</option>
+											<option value="Mrs">Mrs</option>
+										</select>
+									</td>
+									<td class="second-col">
+										
+											<input type="text" id="firstName" class="name required" name="firstName" placeholder="First Name" />
+											<input type="text" id="middleName" class="name" name="middleName" placeholder="Middle Name" />
+										
+									</td>
+									<td class="third-col"></td>
+								</tr>
+								<tr>
+									<td class="first-col">
+										<span></span>
+									</td>
+									<td class="second-col">
+										<input type="text" id="lastName" class="name required extend" name="lastName" placeholder="Last Name" />
+									</td>
+									<td class="third-col"></td>
+								</tr>
+								<tr>
+									<td class="first-col">
+										<span></span>
+									</td>
+									<td class="second-col">
+										<input type="text" class="required extend" id="company" name="company" placeholder="Company" />
+									</td>
+									<td class="third-col"></td>
+								</tr>
+								<tr>
+									<td class="first-col">
+										<label>Contact</label>
+									</td>
+									<td class="second-col">
+									
+											<input type="text" id="workContact" class="required digits" name="workContact" placeholder="Work"/>
+											<input type="text" id="homeContact" class="digits" name="homeContact" placeholder="Home" />
+										
+									</td>
+									<td class="third-col"></td>
+								</tr>
+								<tr>
+									<td class="first-col">
+										<label for="email">Email</label>
+									</td>
+									<td class="second-col">
+										<input type="text" id="email" class="email required extend" name="email" placeholder="Email" />
+									</td>
+									<td class="third-col"></td>
+								</tr>
+								<tr>
+									<td class="first-col">
+										<label for="dob">Date of Birth</label>
+									</td>
+									<td class="second-col">
+										<input type="text" id="dob" class="date extend" name="dob" placeholder="Date of Birth"/>
+									</td>
+									<td class="third-col"></td>
+								</tr>
+								<tr>
+									<td class="first-col">
+										<label>Address</label>
+									</td>
+									<td class="second-col">
+										
+											<textarea id="workAddress" class="address" name="workAddress" rows="3" placeholder="Work"></textarea>
+											<textarea id="homeAddress" class="address" name="homeAddress" rows="3" placeholder="Home"></textarea>
+									
+									</td>
+									<td class="third-col"></td>
+								</tr>
+								<tr>
+									<td class="first-col">
+										<span></span>
+									</td>
+									<td class="second-col">
+										<textarea id="notes" class="description  extend" name="notes" rows="3" placeholder="Notes"></textarea>
+									</td>
+									<td class="third-col"></td>
+								</tr>
+							</table>
+							<div id="messageForm"> </div>
+							<div class="buttons">
+								<button id="reset" type="reset">Clear all</button>
+								<button id="submit" type="submit">Save</button>
+							</div>
+						</form>
+					</div>
+				</p>
+			</div>
+			<div id="confirm-close" >
+				Are you sure you want to close without saving changes?
+			</div>
+			<div id="confirm-delete" >
+				
+			</div>
+		</div>
+	</body>
+</html>

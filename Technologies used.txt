@@ -1,0 +1,11 @@
+
+
+Html 4.0/5.0
+Javascript
+Jquery
+AJAX
+JSON
+TOMCAT Server
+MySQL server
+DHTML (Dynamic)
+
